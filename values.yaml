@@ -1,0 +1,19 @@
+# ConfigMap data
+configMapData:
+  database:
+    username: admin
+    password: secretpassword
+    host: localhost
+    # Add other configuration data as needed
+
+# Placeholder value for initial hash
+configMapHash: initial-hash-value
+
+# Main application image and configurations
+image:
+  name: nginx
+  tag: latest
+
+deployment:
+  replicas: 3
+# Add other image details, such as repository URL, pull policy, etc.

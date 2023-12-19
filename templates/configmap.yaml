@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  # Use values from values.yaml or passed during installation/upgrade
+  database.properties: |
+    username: {{ .Values.configMapData.database.username }}
+    password: {{ .Values.configMapData.database.password }}
+    host: {{ .Values.configMapData.database.host }}
+    port: {{ .Values.configMapData.port }}
+    # Add other key-value pairs as needed
